@@ -15,10 +15,9 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName( name ) {
-  name = 'Snel';
-  return name;
+  return'Hello'+ name;
 }
-console.log('Hello', helloName());
+console.log('Hello', helloName('snel'));
 // Remember to call the function to test
 
 
@@ -63,19 +62,15 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 //    array is empty, return `undefined`.
 let stars = ['ball', 'bike', 'car', 'book'];
 function getLast( array ) {
-  if (array = stars[stars.length-1]){
-    return array;
-  } else {
-    return undefined;
-  }
-
-}
-console.log('last item is', getLast());
+  return array.length-1;
+  } 
+  
+console.log('last item is', getLast(stars));
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-let a2 = ['bus', 'car', 'moto'];
-function findValue(){
+// let a2 = ['bus', 'car', 'moto'];
+function findValue(a2){
   for(let item of a2) {
     if(item === 'car' || item ==='bus' || item==='moto'){
        return true;
@@ -88,7 +83,8 @@ function findValue(){
   
   }
 
-  console.log('This is the value is', findValue());
+  console.log('This is the value is', findValue('bus',['bus','car','moto']));
+  console.log('This is the value is', findValue('moto',['bus','car','moto']))
 
 // ----------------------
 // Stretch Goals
@@ -132,6 +128,7 @@ function greaterZero(){
     if(arrayZ[i] > 0){
     console.log(arrayZ[i] + '');
     }
+    return array;
   }
 }
 console.log(greaterZero());
